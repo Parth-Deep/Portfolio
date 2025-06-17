@@ -895,6 +895,11 @@ body.night-mode .aboutjingle {
   padding:8px ;
 }
 
+/* Smoother animation for mobile */
+.left p, .right img, #about .img img, .resume-btn, .library ul li, .edu-row, .aboutjingle, .swiper-slide img, .swiper-slide video, #btn-container button, #nav a, .contact-info p, .social-links p {
+  will-change: transform, opacity;
+}
+
 @media (max-width: 600px) {
   #theme-toggle {
     font-size: 1.3rem;
