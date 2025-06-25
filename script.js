@@ -74,6 +74,11 @@ createStars();
 // gsap initialization
 
 var tl = gsap.timeline();
+tl.from(".container",{
+  y:60,
+  opacity:0,
+  duration:1
+})
 tl.from(".name", {
   stagger: 1.5,
   y: 10,
@@ -83,12 +88,12 @@ tl.from(".name", {
   color: "red"
 });
 tl.from(".right img", {
-  stagger: 1,
-  y:-500,
+ 
+  scale:1.5,
   borderRadius:"80%",
   duration: 1,
   opacity: 0,
-  backgroundColor: "white"
+  backgroundColor: "black"
 });
 tl.from("#nav a", {
   stagger: 1,
@@ -110,19 +115,31 @@ tl.from(".resume", {
 
 });
 gsap.registerPlugin(ScrollTrigger);
-gsap.from("#about .img img", {
-  scale: 0,
+gsap.from("#about .img img:first-child", {
   x: -800,
-  borderRadius:"80%",
-  duration: 0.5,
+  borderRadius: "100%",
+  duration: 1,
   opacity: 0,
   scrollTrigger: {
-    trigger: "#about .img img",
-    start: "top 95%", // Trigger when image is closer to viewport
-    end: "top 65%",   // End earlier for a more natural effect
-    
+    trigger: "#about .img img:first-child",
+    start: "top 95%",
+    end: "top 65%",
     toggleActions: "play none none none",
-    scrub: true // Remove scrub for instant animation on trigger
+    scrub: true 
+  }
+});
+gsap.from("#about .img img:nth-child(2)", 
+{
+  x: 360,
+  borderRadius: "100%",
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: "#about .img img:first-child",
+    start: "top 95%",
+    end: "top 65%",
+    toggleActions: "play none none none",
+    scrub: true 
   }
 });
 gsap.from("#summary", {
