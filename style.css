@@ -733,6 +733,8 @@ button#btn19:hover {
 
 }
 
+
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -796,7 +798,7 @@ button#btn19:hover {
 }
 
 #contact h1 {
-    margin-left: 700px;
+    margin-left: 300px;
     color: white; 
 }
 
