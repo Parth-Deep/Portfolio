@@ -225,5 +225,27 @@ gsap.from("#contact h1 ", {
   }
 
 });
+// Hamburger and mobile nav functionality (improved)
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+const closeNav = document.getElementById('close-nav');
+
+if (hamburger && mobileNav && closeNav) {
+    hamburger.addEventListener('click', () => {
+        mobileNav.classList.add('open');
+        hamburger.classList.add('active');
+    });
+    closeNav.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('active');
+    });
+    // Close mobile nav when a link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            hamburger.classList.remove('active');
+        });
+    });
+}
 
 
