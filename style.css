@@ -8,7 +8,7 @@ body {
     margin: 0;
     background: black;
     position: relative;
-    overflow-y: hidden;
+    
     ::selection {
         color: #0db7d1;
         background-color: #232526;
