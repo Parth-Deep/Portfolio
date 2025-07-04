@@ -1214,6 +1214,10 @@ body.night-mode .aboutjingle {
     font-size: 15px;
     padding: 8px 14px;
   }
+  .resume-btn {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
   #about, #projects, #skill {
     padding: 0 8px;
   }
